@@ -28,7 +28,6 @@ def index():
                 "icon": data["weather"][0]["icon"]
             }
 
-            # Add city to session history
             if city.title() not in session["history"]:
                 session["history"].append(city.title())
                 session.modified = True
@@ -37,9 +36,7 @@ def index():
 
     return render_template("index.html", weather=weather_data, history=session["history"])
 
-if __name__ == "__main__":
-    app.run(debug=True)
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port) 
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
