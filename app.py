@@ -3,9 +3,8 @@ from flask import Flask, render_template, request, session
 import requests
 
 app = Flask(__name__)
-app.secret_key = "raihanxsk"  # Required for session handling
-
-API_KEY = "799c8b7ad273ae589402bde2966c077f"  # Replace with your actual OpenWeatherMap API key
+app.secret_key = "raihanxsk" 
+API_KEY = "799c8b7ad273ae589402bde2966c077f" 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
